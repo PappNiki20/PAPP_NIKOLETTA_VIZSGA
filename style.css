@@ -1,0 +1,92 @@
+body{
+  background-image: url(hatterek/hatter1.jpg);
+  font-family: Arial;
+}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: green;
+  }
+  
+  li {
+    float: left;
+    padding: 5px;
+  }
+  
+  li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  li a:hover {
+    background-color:rgb(165, 236, 165);
+  }
+  main{
+    background-color: white;
+    width: 80%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-areas: 'h h'
+    'n n'
+    'ar as'
+    'f f';
+  }
+  header{
+    grid-area: h;
+    letter-spacing: 5px;  
+    font-size: 4vw;
+    font-weight: bold;
+  }
+
+  nav{
+    width: 100%;
+    grid-template-columns: n;
+  }
+  h2{
+    margin-bottom: 5px;
+  }
+  article{
+    text-align: justify;
+    padding: 15px;
+    
+    grid-area: ar;
+  }
+  .jobbra{
+    width: 200px;
+    padding: 5px;
+    margin-left: 12px;
+    border: 1px solid lightblue;
+    border-radius: 30px;
+    float: right;
+  }
+  #clear{
+    clear: both;
+  }
+  aside{grid-area: as;
+  
+  }
+  aside>img{
+    width: 100%;
+  }
+  footer{
+    text-align: center;
+    background-color: green;
+    grid-area: f;
+  }
+  @media only screen and (max-width: 600px) {
+    main{grid-template-columns: 2fr;
+      grid-template-areas: 'h '
+      'n'
+      'ar '
+      'as'
+      'f';
+      width: 100%;}
+      
+  }
+  
